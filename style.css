@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'font-happy';
+    src: url(fONTES/TrailerParkGirl.otf);
+    font-weight: normal;
+    
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(imagens/abacaxi-praia.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #D96523;
+    min-width: none;
+    min-height: 150px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+header > h1{
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+main{
+    background-color: #73C6D9;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
+}
+
+div.catGif {
+    background-color: #73C6D9;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.catGif > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+header > h1 {
+    font-family: 'font-happy';
+    font-size: 70px;
+    color: black;
+    text-align: center;
+}
+
