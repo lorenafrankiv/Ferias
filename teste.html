@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+        }
+
+        .countdown-box {
+            text-align: center;
+            padding: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <div class="countdown-box" id="days">0<br>Days</div>
+        <div class="countdown-box" id="hours">0<br>Hours</div>
+        <div class="countdown-box" id="minutes">0<br>Minutes</div>
+        <div class="countdown-box" id="seconds">0<br>Seconds</div>
+    </div>
+
+    <script>
+        // Definir a data alvo da contagem regressiva
+        const targetDate = new Date('2023-12-17T16:00:00').getTime();
+
+        function updateCountdown() {
+            // Obter a data e hora atuais
+            const currentDate = new Date().getTime();
+
+            // Calcular a diferença entre a data alvo e a data atual
+            const difference = targetDate - currentDate;
+
+            // Calcular dias, horas, minutos e segundos
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Atualizar os elementos HTML com os valores calculados
+            document.getElementById('days').innerHTML = days + "<br>Days";
+            document.getElementById('hours').innerHTML = hours + "<br>Hours";
+            document.getElementById('minutes').innerHTML = minutes + "<br>Minutes";
+            document.getElementById('seconds').innerHTML = seconds + "<br>Seconds";
+        }
+
+        // Atualizar a contagem regressiva a cada segundo
+        setInterval(updateCountdown, 1000);
+
+        // Inicializar a contagem regressiva
+        updateCountdown();
+    </script>
+</body>
+</html>

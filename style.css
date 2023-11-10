@@ -29,16 +29,14 @@ header > h1{
 }
 
 main{
-    background-color: #73C6D9;
-    min-width: 300px;
-    max-width: 1000px;
+    background-color: black;
     margin: auto;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
 }
 
 div.catGif {
-    background-color: #73C6D9;
+    background-color: black;
     padding-bottom: 58%;
     position: relative;
 }
@@ -65,5 +63,20 @@ header > h1 {
     font-size: 70px;
     color: black;
     text-align: center;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.countdown-box {
+    display: inline-block
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
