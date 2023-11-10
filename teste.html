@@ -37,6 +37,7 @@
         <div class="countdown-box" id="seconds">0<br>Seconds</div>
     </div>
 
+
     <script>
         // Definir a data alvo da contagem regressiva
         const targetDate = new Date('2023-11-10T11:34:50').getTime();
@@ -66,7 +67,7 @@
             console.log('antes');
             const tempoAtual = new Date().getTime();
             if (targetDate < tempoAtual) {
-                document.getElementById('geral').innerHTML = "<h1>É FÉRIAS BB</h1>";
+                document.getElementById('geral').innerHTML = '<h1>É FÉRIAS BB</h1>';
                 console.log('depois');
             }
            
