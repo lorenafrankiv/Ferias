@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <div class="countdown-container">
+    <div class="countdown-container" id="geral">
         <div class="countdown-box" id="days">0<br>Days</div>
         <div class="countdown-box" id="hours">0<br>Hours</div>
         <div class="countdown-box" id="minutes">0<br>Minutes</div>
@@ -39,7 +39,7 @@
 
     <script>
         // Definir a data alvo da contagem regressiva
-        const targetDate = new Date('2023-12-17T16:00:00').getTime();
+        const targetDate = new Date('2023-11-10T11:34:50').getTime();
 
         function updateCountdown() {
             // Obter a data e hora atuais
@@ -61,8 +61,19 @@
             document.getElementById('seconds').innerHTML = seconds + "<br>Seconds";
         }
 
+        function timer() {
+            updateCountdown();
+            console.log('antes');
+            const tempoAtual = new Date().getTime();
+            if (targetDate < tempoAtual) {
+                document.getElementById('geral').innerHTML = "<h1>É FÉRIAS BB</h1>";
+                console.log('depois');
+            }
+           
+        }
+
         // Atualizar a contagem regressiva a cada segundo
-        setInterval(updateCountdown, 1000);
+        setInterval(timer, 1000);
 
         // Inicializar a contagem regressiva
         updateCountdown();
