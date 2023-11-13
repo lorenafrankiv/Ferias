@@ -1,6 +1,7 @@
 
 // Definir a data alvo da contagem regressiva
-const targetDate = new Date('2023-12-17T16:00:00').getTime();
+const targetDate = new Date('2023-12-16T17:09:00').getTime();
+var htmlFerias;
 
 function updateCountdown() {
     // Obter a data e hora atuais
@@ -24,17 +25,25 @@ function updateCountdown() {
 
 function timer() {
     updateCountdown();
-    console.log('antes');
     const tempoAtual = new Date().getTime();
     if (targetDate < tempoAtual) {
-        document.getElementById('geral').innerHTML = "<h1>É FÉRIAS BB</h1>";
+        document.getElementById('main-container').innerHTML = htmlFerias;
+        document.getElementById('inicio').innerText = 'CHEGOU';
         console.log('depois');
     }
     
 }
 
+function alterarDivMSGferias() {
+    const msgFeriasDiv = document.getElementById('msg-ferias');
+    htmlFerias = msgFeriasDiv.innerHTML;
+    msgFeriasDiv.innerHTML = '';
+}
+
 // Atualizar a contagem regressiva a cada segundo
 setInterval(timer, 1000);
+
+alterarDivMSGferias();
 
 // Inicializar a contagem regressiva
 updateCountdown();

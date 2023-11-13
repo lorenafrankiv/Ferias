@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTAGEM REGRESSIVA PARA FÉRIAS</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>THE FÉRIAS IS COMING...</h1>
+        <h1 id="inicio">THE FÉRIAS IS COMING...</h1>
     </header>
     <main>
-        <div class="catGif">
+        <div class="catGif" id="main-container">
             <iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/IsDjNQPc4weWPEwhWm/video" width="480">
             </iframe>
             <div class="countdown-body">
-                <div class="countdown-container" id="geral">
+                <div class="countdown-container">
                     <div class="countdown-box" id="days">0<br>Days</div>
                     <div class="countdown-box" id="hours">0<br>Hours</div>
                     <div class="countdown-box" id="minutes">0<br>Minutes</div>
@@ -25,8 +23,12 @@
                 </div>
             </div>
         </div>
+        <div id="msg-ferias">
+            <iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/l0amJzVHIAfl7jMDos" width="480">
+            </iframe>
+        </div>
         
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
